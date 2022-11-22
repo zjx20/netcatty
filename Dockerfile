@@ -1,6 +1,6 @@
 FROM --platform=$BUILDPLATFORM tinygo/tinygo:0.26.0 AS build
 WORKDIR /src
-COPY go.mod go.sum ./
+COPY go.mod ./
 RUN go mod download
 COPY . .
 ARG TARGETOS TARGETARCH
